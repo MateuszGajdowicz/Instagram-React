@@ -1,4 +1,24 @@
+import React, { useState, useEffect } from "react";
 function MainPage(props){
+    const More = '...Więcej';
+    const [Description, setDescription]= useState(props.Description);
+    const [isExtended, setIsExtended] = useState(false);
+    useEffect(()=>{
+        if(!isExtended && Description.length>20){
+            setDescription(Description.slice(0,20));
+        }
+        else{
+            setDescription(props.Description);
+
+    }}, [props.Description, isExtended]);
+
+
+        function HandleMore(){
+            setIsExtended(true);
+
+        }
+        
+
     return(
         <div className="Container">
             <div className="PostContainer">
@@ -17,7 +37,11 @@ function MainPage(props){
                     </div>
                     <p style={{fontWeight:"bold"}}id ="LikeCount">Liczba polubień: {props.Likes}</p>
                     <p id="Description">
-                        <strong>{props.Username}: </strong>loremloremLorem ipsum dolor sit amlorem  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio doloribus sunt, velit magnam atque ab architecto, vero pariatur laudantium qui labore culpa similique sequi impedit, earum enim rerum quidem fugiat.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem a inventore quidem quia doloremque. Consequatur sunt amet similique dolore qui. Facere mollitia eius minima odio saepe numquam earum culpa voluptate? et consectetur adipisicing elit. Explicabo, voluptatem et beatae ducimus molestias iusto. Quam mollitia dolor molestiae sed nobis, maiores, nihil adipisci facilis enim unde iusto quas tenetur.
+                        <strong>{props.Username}: </strong>{Description} 
+                        {Description.length > 20 && !isExtended && (
+                            <span style={{ color: 'blue', cursor: 'pointer' }} onClick={HandleMore}>{More}</span>
+                        )}
+                        
                     </p>
                     <p style={{color:"grey"}}>Zobacz wszystkie komentarze: {props.Comments}</p>
                     <div className="CommentContainer">
