@@ -2,6 +2,7 @@ import MainPage from "./assets/MainPage.jsx"
 import Stories from "./assets/Stories.jsx"
 import StoriesContainer from "./assets/StoriesContainer.jsx"
 import SideBar from "./assets/SideBar.jsx"
+import RightBarContainer from "./RightBrContainer.jsx"
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   return (
 
     <>
+    <RightBarContainer/>
     <SideBar/>
     <StoriesContainer/>
     <MainPage Description = "LOOOOL" Username="Mateusz" Likes='3456' Comments='57'/>

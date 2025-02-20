@@ -5,7 +5,7 @@ function MainPage(props){
     const [isExtended, setIsExtended] = useState(false);
     useEffect(()=>{
         if(!isExtended && Description.length>20){
-            setDescription(Description.slice(0,20));
+            setDescription(props.Description.slice(0,20));
         }
         else{
             setDescription(props.Description);
@@ -38,7 +38,7 @@ function MainPage(props){
                     <p style={{fontWeight:"bold"}}id ="LikeCount">Liczba polubień: {props.Likes}</p>
                     <p id="Description">
                         <strong>{props.Username}: </strong>{Description} 
-                        {Description.length > 20 && !isExtended && (
+                        {props.Description.length > 20 && !isExtended && (
                             <span style={{ color: 'blue', cursor: 'pointer' }} onClick={HandleMore}>{More}</span>
                         )}
                         

@@ -20,7 +20,6 @@ function StoriesContainer(){
             <Stories username="LMAO"/>
             <Stories username="Jezus"/>
             <Stories username="Jezus"/>
-            <Stories username="Jezus"/>
 
         </div>  
         <button id = "right"className="Arrows">{">"}</button>
