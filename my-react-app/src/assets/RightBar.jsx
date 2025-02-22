@@ -1,3 +1,5 @@
+
+import "./RightBar.css"; 
 function RightBar(props){
     return(
             <div className="ProfileContainer">

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import OptionsContainer from "./OptionsContainer.jsx";
+import "./MainPage.css";
 function MainPage(props){
     const More = '...Więcej';
     const [Description, setDescription]= useState(props.Description);
@@ -34,6 +36,10 @@ function MainPage(props){
         }
    
     }
+    const [OptionsVisible, setOptionsVisible] = useState(false);
+    function displayOptions(){
+        setOptionsVisible(prev=>!prev);
+      }
 
         
 
@@ -44,7 +50,7 @@ function MainPage(props){
                     <img id ="ProfilePicture"src="src/assets/images/Example.png" alt="" />
                     <h3  id ="UserName">{props.Username}</h3>
                     <h3 style={{color:"grey", fontWeight:"light"}}>13 min.</h3>
-                    <h3 id="Dots">...</h3>
+                    <h3 onClick={displayOptions} id="Dots">...</h3>
                 </div>
                 <img id="Post" src="src/assets/images/Example.png" alt="" />
                 {heartVisible &&
@@ -69,6 +75,8 @@ function MainPage(props){
                         <input placeholder="Dodaj komentarz..."id="AddComment" type="text" />
                         <p>Opublikuj</p>
                     </div>
+                    {OptionsVisible && <OptionsContainer hideOptions={()=>setOptionsVisible(false)}/>}
+                    
 
                 </div>
             </div>

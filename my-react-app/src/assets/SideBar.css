@@ -1,0 +1,28 @@
+/*CSS FOR SIDEBAR*/
+.SideBarContainer{
+    display: flex;
+    flex-direction: column;
+    position:fixed;
+    width: 200px;
+    height: 100%;
+    border-right: hsl(0, 0%, 29%) 1px solid;
+    font-size: 0.7em;
+    padding-left: 5px;
+    padding-right: 15px;
+    top: 0;
+    padding-top: 15px;
+    
+    h2{
+        padding: 12px;
+        padding-left: 7px;
+        margin: 5px;
+        border-radius: 10px;
+        transition: ease 0.3s;
+        cursor: pointer;
+    }
+    h2:hover{
+        background-color: hsl(0, 0%, 9%);
+
+    }
+
+}

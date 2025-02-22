@@ -1,4 +1,5 @@
 import Stories from "./Stories.jsx";
+import "./StoriesContainer.css";
 function StoriesContainer(){
     return(
 

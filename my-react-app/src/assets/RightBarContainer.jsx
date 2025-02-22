@@ -1,3 +1,4 @@
+import "./RightBarContainer.css";
 import RightBar from "./RightBar";
 function RightBarContainer(){
     return(

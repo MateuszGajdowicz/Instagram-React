@@ -1,0 +1,14 @@
+.ProfileContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+}
+.TextContainer{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    p{
+        margin: 5px;
+    }
+}

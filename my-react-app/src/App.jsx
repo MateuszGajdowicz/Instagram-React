@@ -3,6 +3,8 @@ import Stories from "./assets/Stories.jsx"
 import StoriesContainer from "./assets/StoriesContainer.jsx"
 import SideBar from "./assets/SideBar.jsx"
 import RightBarContainer from "./assets/RightBarContainer.jsx"
+import OptionsContainer from "./assets/OptionsContainer.jsx"
+import Relacje from "./assets/Relacje.jsx"
 
 function App() {
 
@@ -10,6 +12,7 @@ function App() {
   return (
 
     <>
+    <Relacje/>
     <RightBarContainer/>
     <SideBar/>
     <StoriesContainer/>

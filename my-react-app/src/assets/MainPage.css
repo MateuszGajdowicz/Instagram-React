@@ -1,0 +1,111 @@
+/* CSS FOR MAINPAGE.JSX*/
+.Container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.PostContainer{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    border-bottom: 1px white solid;
+    max-width: 450px;
+    word-wrap: break-word;
+    position: relative;
+    
+    
+}
+.UpperContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    h{
+        font-size: 1em;
+    }
+    #Dots{
+        margin-left: auto;
+        cursor: pointer;r
+
+    }
+}
+#ProfilePicture{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 3px solid pink;  
+    
+}
+#Post{
+    height:450px;
+    width: 450px;
+    border-radius: 2px;
+
+
+}
+#heartIcon{
+    position: absolute;
+    left: 35%;
+    font-size: 7em;
+    top: 15%;
+
+}
+.ActionContainer{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-left: 10px;
+    font-size: 1.5em;
+    margin: 0;
+    p:hover{
+        filter: brightness(60%);
+        cursor: pointer;
+        
+    }
+    
+}
+
+#Save{
+    margin-left: auto;
+
+}
+#AddComment{
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    
+}
+.CommentContainer{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    p{
+        position: absolute;
+        right: 10px;
+        display: none;;
+    p:hover{
+        color: blue;
+    }
+        
+    }
+}
+
+#AddComment:focus + p,
+#AddComment:not(:placeholder-shown) + p {
+    display:flex;
+}
+.ForYouText{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 600px;
+    gap: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 0px;
+    border-bottom: 1px solid hsl(0, 0%, 29%);
+}

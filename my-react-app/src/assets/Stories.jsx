@@ -1,3 +1,4 @@
+import "./Stories.css";
 function Stories(props){
     return(
         <div className="StoryContainer">
