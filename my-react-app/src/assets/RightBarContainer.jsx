@@ -1,4 +1,4 @@
-import RightBar from "./assets/RightBar.jsx"
+import RightBar from "./RightBar";
 function RightBarContainer(){
     return(
         <>

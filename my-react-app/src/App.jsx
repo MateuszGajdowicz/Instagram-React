@@ -2,8 +2,7 @@ import MainPage from "./assets/MainPage.jsx"
 import Stories from "./assets/Stories.jsx"
 import StoriesContainer from "./assets/StoriesContainer.jsx"
 import SideBar from "./assets/SideBar.jsx"
-import RightBarContainer from "./RightBrContainer.jsx"
-
+import RightBarContainer from "./assets/RightBarContainer.jsx"
 
 function App() {
 

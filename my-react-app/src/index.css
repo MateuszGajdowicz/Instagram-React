@@ -24,9 +24,9 @@ img{
     flex-direction: column;
     padding-bottom: 20px;
     border-bottom: 1px white solid;
-    left: 30%;
     max-width: 450px;
     word-wrap: break-word;
+    position: relative;
     
     
 }
@@ -35,6 +35,13 @@ img{
     flex-direction: row;
     gap: 20px;
     position: relative;
+    h{
+        font-size: 1em;
+    }
+    #Dots{
+        margin-left: auto;
+
+    }
 }
 #ProfilePicture{
     height: 35px;
@@ -48,12 +55,27 @@ img{
     width: 450px;
     border-radius: 2px;
 
+
+}
+#heartIcon{
+    position: absolute;
+    left: 35%;
+    font-size: 7em;
+    top: 15%;
+
 }
 .ActionContainer{
     display: flex;
     flex-direction: row;
     gap: 10px;
     margin-left: 10px;
+    font-size: 1.5em;
+    margin: 0;
+    p:hover{
+        filter: brightness(60%);
+        cursor: pointer;
+        
+    }
     
 }
 

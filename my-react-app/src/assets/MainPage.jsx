@@ -17,6 +17,24 @@ function MainPage(props){
             setIsExtended(true);
 
         }
+    const [heart, setHeart] = useState("❤️")
+    const [heartVisible, setHeartVisible] = useState(false);
+
+    function ChangeHeart(){
+        if(heart==="❤️"){
+            setHeart("💗");
+            setHeartVisible(true);
+            setTimeout(()=>{
+                setHeartVisible(false);
+            },1500)
+            
+        }
+        else{
+            setHeart("❤️");
+        }
+   
+    }
+
         
 
     return(
@@ -24,13 +42,16 @@ function MainPage(props){
             <div className="PostContainer">
                 <div className="UpperContainer">
                     <img id ="ProfilePicture"src="src/assets/images/Example.png" alt="" />
-                    <h3 id ="UserName">{props.Username}</h3>
+                    <h3  id ="UserName">{props.Username}</h3>
+                    <h3 style={{color:"grey", fontWeight:"light"}}>13 min.</h3>
+                    <h3 id="Dots">...</h3>
                 </div>
                 <img id="Post" src="src/assets/images/Example.png" alt="" />
-                
+                {heartVisible &&
+                <h1 id="heartIcon">💗</h1>}
                 <div className="PostFooter">
                     <div className="ActionContainer">
-                        <p id="Heart">❤️</p>
+                        <p onClick={()=>ChangeHeart()}id="Heart">{heart}</p>
                         <p id="Comment">📰</p>
                         <p id="Send">👉</p>
                         <p id="Save">📩</p>
