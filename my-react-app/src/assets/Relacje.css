@@ -1,5 +1,5 @@
 .RelacjeContainer{
-    background-color: grey;
+    background-color: rgb(24, 24, 24);
     height: 100%;
     width: 100%;
     position: fixed;
@@ -9,6 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 40px;
+    display: none;
+}
+#Logo{
+    position: absolute;
+    left: 10px;
+    top:10px
+}
+#X{
+    position: absolute;
+    right: 40px;
+    top: 10px;
 }
 .Story{
     width: 27%;
@@ -47,24 +59,67 @@
     }
 }
 .UpContainer{
-    background-color: blue;
     width: 90%;
     height: 70px;
     top: 10px;
     position: relative;
+
 }
 .StuffContainer{
     display: flex;
     align-items: end;
     height: 100%;
     gap: 15px;
+    position: relative;
     
     img{
         width: 40px;
         height: 40px;
         border-radius: 50%;
+        
     }
-    p{
-        padding: 0;
+    .ps{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        flex-direction: row;
+        gap: 20px;
+        margin-right: 10px;
+        font-size: 1.5em;
+        height:50px;
+    }
+
+}
+.Timer{
+    background-color: white;
+    width: 90%;
+    height: 3px;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+}
+.LeftStories, .RightStories{
+    display: flex;
+    gap: 40px;
+    width: 400px;
+}
+.SideStory{
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-image: url("src/assets/images/Example.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    img{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: orange 3px solid;
+
     }
 }
